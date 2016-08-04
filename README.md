@@ -29,7 +29,7 @@ npm test
 ## 关于semantic.min.css的定制
 - 由于Semantic UI 默认使用的是谷歌提供的字体，并且是直接使用了谷歌的官方链接。因此本项目使用的semantic.min.css是经过本地化定制的。主要变更如下：
 
-![image](https://github.com/rootsli/vueadmin/doc/semantic-css-custom.jpg)
+![image](https://github.com/rootsli/vueadmin/blob/master/doc/semantic-css-custom.jpg)
 
 ## Change Log
 - 20160804
