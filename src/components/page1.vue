@@ -3,6 +3,15 @@
     <breadcrumb :paths="paths"></breadcrumb>
     <div class="ui basic segment">
         <div>this is page1</div>
+        <div class="ui dropdown">
+            <input type="hidden" name="gender">
+            <i class="dropdown icon"></i>
+            <div class="default text">Gender</div>
+            <div class="menu">
+                <div class="item" data-value="male">Male</div>
+                <div class="item" data-value="female">Female</div>
+            </div>
+        </div>
         <button @click="gotoPage2">跳转到page2</button>
     </div>
 </template>

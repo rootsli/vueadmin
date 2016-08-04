@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import VueValidator from 'vue-validator'
 import {sync} from 'vuex-router-sync'
 import store from './vuex/store'
-import '../node_modules/semantic-ui-css/semantic.min.css'
+import './assets/semantic-css/semantic.min.css'
 // import semantic from 'semantic'
 import routes from './router/routes'
 import alias from './router/alias'
@@ -25,19 +25,19 @@ const router = new VueRouter({
 router.map(routes)
 router.alias(alias)
 router.beforeEach(transition => {
-    // console.log('before router')
-    store.dispatch(SET_PROGRESS, {rate: 1})
-
     if (transition.to.auth && !store.state.auth.token) {
         // transition.abort()
         transition.redirect('/login')
     } else {
         transition.next()
     }
+
+    //触发进度条
+    if (transition.to.name != 'login') {
+        store.dispatch(SET_PROGRESS, {rate: 1})
+    }
 })
 router.afterEach(transition => {
-    // console.log('after router')
-    store.dispatch(SET_PROGRESS, {rate: 2})
     store.dispatch(SET_MENU, {current: transition.to.parent})
     window.scrollTo(0, 0)
 })

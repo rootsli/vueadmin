@@ -9,5 +9,8 @@ export default {
     },
     logout: () => {
 
+    },
+    getUserInfo: () => {
+
     }
 }

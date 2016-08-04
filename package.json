@@ -14,7 +14,6 @@
   "dependencies": {
     "babel-runtime": "^6.0.0",
     "react-cookie": "^0.4.7",
-    "semantic-ui-css": "^2.2.2",
     "vue": "^1.0.21",
     "vue-resource": "^0.9.3",
     "vue-router": "^0.7.13",

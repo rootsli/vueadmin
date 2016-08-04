@@ -1,16 +1,14 @@
 <template>
-    <div style="position:relative;">
-        <div class="ui inverted left vertical sidebar menu" :class={visible:isVisible}>
-            <div v-for="menu in menus">
-                <a class="teal item" :class="{'active': (menu.name==currentMenu)}">
-                    <i class="icon" :class="menu.icon"></i> {{menu.title}}
-                </a>
-                <div class="menu">
-                    <a class="item" v-for="subMenu in menu.subMenu" v-link="{path: subMenu.path, exact: true}"> {{subMenu.title}} </a>
-                </div>
+    <div class="menu-toggle" @click="toggleMenu" :style="{left:isVisible?'260px':'0px'}">{{isVisible?'隐藏菜单':'显示菜单'}}</div>
+    <div class="ui inverted left vertical sidebar menu" :class={visible:isVisible}>
+        <div v-for="menu in menus">
+            <a class="teal item" :class="{'active': (menu.name==currentMenu)}">
+                <i class="icon" :class="menu.icon"></i> {{menu.title}}
+            </a>
+            <div class="menu">
+                <a class="item" v-for="subMenu in menu.subMenu" v-link="{path: subMenu.path, exact: true}"> {{subMenu.title}} </a>
             </div>
         </div>
-        <div class="menu-toggle" @click="toggleMenu" :style="{left:isVisible?'260px':'0px'}">{{isVisible?'隐藏菜单':'显示菜单'}}</div>
     </div>
 </template>
 <script>

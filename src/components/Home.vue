@@ -27,6 +27,7 @@
 </template>
 <script>
     import Menu from './menu/Menu'
+    import {setProgress} from '../vuex/actions'
 
     export default{
         data(){
@@ -40,24 +41,30 @@
         vuex: {
             getters: {
                 progress: ({progress}) => progress.rate || 0
+            },
+            actions:{
+                setProgress
             }
         },
         watch: {
             'progress': {
                 deep: true,
                 handler: function (val) {
-                    this.isShow = true;
-                    this.width = 10
-                    setTimeout(()=> {
-                        this.width = 60
+                    if (val == 1) { //有路由切换
+                        this.isShow = true;
+                        this.width = 10
                         setTimeout(()=> {
-                            this.width = 100
+                            this.width = 60
                             setTimeout(()=> {
-                                this.isShow = false;
-                                this.width = 0
-                            }, 300)
-                        }, 200)
-                    }, 100)
+                                this.width = 100
+                                setTimeout(()=> {
+                                    this.isShow = false;
+                                    this.width = 0
+                                    this.setProgress(0)
+                                }, 300)
+                            }, 200)
+                        }, 100)
+                    }
                 }
             }
         },

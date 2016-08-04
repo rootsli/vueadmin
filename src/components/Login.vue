@@ -37,8 +37,8 @@
                     account: '',
                     password: ''
                 },
-                namePlaceholder: '请输入登录名',
-                pwdPlaceholder: '请输入密码'
+                namePlaceholder: '请输入登录名'//,
+//                pwdPlaceholder: '请输入密码'
             }
         },
         methods: {
@@ -55,7 +55,7 @@
         },
         vuex: {
             getters: {
-                getToken: ({auth}) => auth.token
+                pwdPlaceholder: ({auth}) => auth.errmsg
             },
             actions: {
                 login
