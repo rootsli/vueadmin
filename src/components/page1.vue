@@ -50,8 +50,8 @@
             }
         },
         ready() {
-            $(".ui.checkbox").checkbox()
-            $('.ui.dropdown').dropdown()
+            $(".ui.basic .ui.checkbox").checkbox()
+            $('.ui.basic .ui.dropdown').dropdown()
         }
     }
 </script>

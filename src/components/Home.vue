@@ -78,7 +78,7 @@
             }
         },
         ready(){
-            $('.ui.dropdown').dropdown({on: 'hover'})
+            $('.home-header .ui.dropdown').dropdown({on: 'hover'})
         }
     }
 </script>
@@ -89,10 +89,10 @@
 
     .ui.inline.dropdown {
         float: right;
-        padding-right: 35px;
+        margin-right: 35px;
     }
 
-    .ui.inline.dropdown > .text:hover {
+    .ui.inline.dropdown:hover {
         background-color: #53575E;
     }
 
