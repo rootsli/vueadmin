@@ -1,5 +1,5 @@
 <template>
-    <div class="ui inverted left vertical sidebar visible menu">
+    <div class="ui inverted left vertical sidebar inline uncover visible menu">
         <div v-for="menu in menus">
             <a class="teal item" :class="{'active': (menu.name==currentMenu)}">
                 <i class="icon" :class="menu.icon"></i> {{menu.title}}

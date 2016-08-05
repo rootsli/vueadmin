@@ -28,3 +28,14 @@
         }
     }
 </script>
+<style>
+    .breadcrumb-item{
+        background-color: #eee;
+        box-shadow: none;
+        padding-left: 8px;
+    }
+    .ui.large.breadcrumb{
+        height: 35px !important;
+        line-height: 35px !important;;
+    }
+</style>

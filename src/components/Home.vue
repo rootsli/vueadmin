@@ -3,9 +3,12 @@
         <div class="bar" style="transition-duration: 300ms;min-width:0;height:3px;" :style="{width: width + '%'}"></div>
     </div>
     <div class="home-header">
+        <a href="https://github.com/rootsli/vueadmin" target="_blank">
+            <img src="../assets/img/logo2.png" class="logo" alt="logo" />
+        </a>
         <div class="ui inline pointing dropdown">
             <div class="text">
-                <img class="ui avatar image" src="../assets/avatar_small.jpg"> 张小泉
+                <img class="ui avatar image" src="../assets/img/avatar_small.jpg"> 张小泉
                 <i class="dropdown icon"></i>
             </div>
             <div class="menu ui transition">
@@ -82,7 +85,7 @@
         }
     }
 </script>
-<style>
+<style scoped>
     .ui.attached.segment {
         border-top: 0;
     }
@@ -150,5 +153,9 @@
 
     .menu-toggle:hover {
         background-color: rgba(12, 173, 183, 0.76);
+    }
+
+    .logo{
+        vertical-align: middle;
     }
 </style>
