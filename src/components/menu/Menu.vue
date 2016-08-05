@@ -1,6 +1,5 @@
 <template>
-    <div class="menu-toggle" @click="toggleMenu" :style="{left:isVisible?'260px':'0px'}">{{isVisible?'隐藏菜单':'显示菜单'}}</div>
-    <div class="ui inverted left vertical sidebar menu" :class={visible:isVisible}>
+    <div class="ui inverted left vertical sidebar visible menu">
         <div v-for="menu in menus">
             <a class="teal item" :class="{'active': (menu.name==currentMenu)}">
                 <i class="icon" :class="menu.icon"></i> {{menu.title}}
@@ -18,7 +17,6 @@
         data(){
             return {
                 menus: menus,
-                isVisible:true
             }
         },
         vuex: {
@@ -26,10 +24,8 @@
                 currentMenu: ({menu}) => menu.current || 'menu1'
             }
         },
-        methods:{
-            toggleMenu(){
-                this.isVisible = !this.isVisible
-            }
+        ready(){
+            $('.ui.sidebar').sidebar({dimPage: false, closable: false,context:$('.ui.pushable')})
         }
     }
 </script>
@@ -61,23 +57,5 @@
 
     .ui.menu .menu {
         padding: 10px 0;
-    }
-
-    .menu-toggle {
-        position: absolute;
-        background-color: #0cadb7;
-        height: 81px;
-        width: 20px;
-        z-index: 9999;
-        top: 219px;
-        font-size: 14px;
-        color: #fff;
-        padding: 2px;
-        cursor: pointer;
-        border-top-right-radius: 6px;
-        border-bottom-right-radius: 6px;
-    }
-    .menu-toggle:hover{
-        background-color: rgba(12, 173, 183, 0.76);
     }
 </style>

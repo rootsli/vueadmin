@@ -19,8 +19,9 @@ module.exports = {
     alias: {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components')//,
-      // 'semantic': path.resolve(__dirname, '../node_modules/semantic-ui-css/semantic.min.js')
+      'components': path.resolve(__dirname, '../src/components'),
+      // 'jquery': "jquery/dist/jquery.min",
+      'semantic': path.resolve(__dirname, '../node_modules/semantic-ui-css/semantic.min.js')
     }
   },
   resolveLoader: {
@@ -64,16 +65,16 @@ module.exports = {
       }
     ]
   },
-  // plugins:[
-  //   new webpack.ProvidePlugin({
-  //     $: "jquery",
-  //     jQuery: "jquery",
-  //     "window.jQuery": "jquery",
-  //     semantic: 'semantic-ui-css',
-  //     Semantic: 'semantic-ui-css',
-  //     'semantic-ui': 'semantic-ui-css'
-  //   })
-  // ],
+  plugins:[
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      semantic: 'semantic-ui-css',
+      Semantic: 'semantic-ui-css',
+      'semantic-ui': 'semantic-ui-css'
+    })
+  ],
   vue: {
     loaders: utils.cssLoaders()
   }

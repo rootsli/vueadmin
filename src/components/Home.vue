@@ -3,12 +3,12 @@
         <div class="bar" style="transition-duration: 300ms;min-width:0;height:3px;" :style="{width: width + '%'}"></div>
     </div>
     <div class="home-header">
-        <div class="ui inline pointing  dropdown" @mouseover="toggle('over')" @mouseout="toggle('out')">
-            <div class="text"><img class="ui avatar image"
-                                   src="http://cs.101.com/v0.1/static/cscommon/avatar/310198/310198.jpg?size=80"> 李承彬
+        <div class="ui inline pointing dropdown">
+            <div class="text">
+                <img class="ui avatar image" src="../assets/avatar_small.jpg"> 张小泉
+                <i class="dropdown icon"></i>
             </div>
-            <i class="dropdown icon"></i>
-            <div class="menu ui transition" :class="{'visible':flag=='over','hidden':flag=='out'}">
+            <div class="menu ui transition">
                 <a class="item" href="http://www.yeelink.net"><i class="reply mail icon"></i>返回首页</a>
                 <a class="item" href="/user/logout"><i class="sign out icon"></i>注销登录</a>
             </div>
@@ -19,6 +19,7 @@
             <!-- menu -->
             <menu></menu>
             <div class="pusher">
+                <div class="menu-toggle" @click="toggleMenu">{{toggleTitle}}</div>
                 <!-- page container -->
                 <router-view></router-view>
             </div>
@@ -32,17 +33,16 @@
     export default{
         data(){
             return {
-                flag: 'out',
-                timer: null,
                 width: 0,
-                isShow: false
+                isShow: false,
+                toggleTitle: '隐藏菜单'
             }
         },
         vuex: {
             getters: {
                 progress: ({progress}) => progress.rate || 0
             },
-            actions:{
+            actions: {
                 setProgress
             }
         },
@@ -72,17 +72,13 @@
             Menu
         },
         methods: {
-            toggle(flag){
-                var self = this;
-                if (flag == 'out') {
-                    self.timer = setTimeout(() => {
-                        self.flag = flag;
-                    }, 600);
-                } else {
-                    clearTimeout(self.timer);
-                    self.flag = flag;
-                }
+            toggleMenu(){
+                this.toggleTitle = (this.toggleTitle == '隐藏菜单' ? '显示菜单' : '隐藏菜单')
+                $('.ui.pushable .ui.sidebar').sidebar('toggle')
             }
+        },
+        ready(){
+            $('.ui.dropdown').dropdown({on: 'hover'})
         }
     }
 </script>
@@ -94,6 +90,10 @@
     .ui.inline.dropdown {
         float: right;
         padding-right: 35px;
+    }
+
+    .ui.inline.dropdown > .text:hover {
+        background-color: #53575E;
     }
 
     .ui.pointing.dropdown > .menu {
@@ -131,5 +131,24 @@
     .ui.progress {
         position: absolute !important;
         width: 100%;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        background-color: #0cadb7;
+        height: 81px;
+        width: 20px;
+        z-index: 9999;
+        top: 219px;
+        font-size: 14px;
+        color: #fff;
+        padding: 2px;
+        cursor: pointer;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    .menu-toggle:hover {
+        background-color: rgba(12, 173, 183, 0.76);
     }
 </style>
