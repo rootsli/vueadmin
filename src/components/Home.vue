@@ -18,14 +18,14 @@
         </div>
     </div>
     <div class="home-main">
-        <div class="ui bottom attached segment pushable">
             <!-- menu -->
+        <div class="main-menu">
             <menu></menu>
-            <div class="pusher">
-                <div class="menu-toggle" @click="toggleMenu">{{toggleTitle}}</div>
-                <!-- page container -->
-                <router-view></router-view>
-            </div>
+        </div>
+        <div class="main-content">
+            <div class="menu-toggle" @click="toggleMenu">{{toggleTitle}}</div>
+            <!-- page container -->
+            <router-view></router-view>
         </div>
     </div>
 </template>
@@ -76,8 +76,18 @@
         },
         methods: {
             toggleMenu(){
-                this.toggleTitle = (this.toggleTitle == '隐藏菜单' ? '显示菜单' : '隐藏菜单')
-                $('.ui.pushable .ui.sidebar').sidebar('toggle')
+                $(".main-menu").toggle(300)
+                if (this.toggleTitle == '隐藏菜单') {
+                    $(".main-content").animate({
+                        left: '0px'
+                    }, 200)
+                    this.toggleTitle = '显示菜单'
+                } else {
+                    $(".main-content").animate({
+                        left: '200px'
+                    }, 200)
+                    this.toggleTitle = '隐藏菜单'
+                }
             }
         },
         ready(){
@@ -86,10 +96,6 @@
     }
 </script>
 <style scoped>
-    .ui.attached.segment {
-        border-top: 0;
-    }
-
     .ui.inline.dropdown {
         float: right;
         margin-right: 35px;
@@ -103,7 +109,7 @@
         margin-top: 0 !important;
     }
 
-    .pusher .breadcrumb-item {
+    .main-menu .breadcrumb-item {
         height: 39px;
         line-height: 39px;
         background-color: #FFFFFF;
@@ -131,18 +137,44 @@
         font-size: 14px;
     }
 
+    .home-main .main-menu {
+        width: 200px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        margin-bottom: 0;
+        border-right: 3px solid #0cadb7;
+        background-color: #293541;
+        float: left;
+        height: 100%;
+        color: #bbb;
+        overflow: hidden;
+    }
+
+    .home-main .main-content {
+        float: left;
+        height: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 200px;
+    }
+
     .ui.progress {
         position: absolute !important;
         width: 100%;
     }
 
     .menu-toggle {
-        position: absolute;
+        float: left;
         background-color: #0cadb7;
-        height: 81px;
         width: 20px;
-        z-index: 9999;
-        top: 450px;
+        margin-top: 410px;
         font-size: 14px;
         color: #fff;
         padding: 2px;

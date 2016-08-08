@@ -1,10 +1,8 @@
 <template>
-    <div class="ui inverted left vertical sidebar inline uncover visible menu">
-        <div v-for="menu in menus">
-            <a class="teal item" :class="{'active': (menu.name==currentMenu)}">
-                <i class="icon" :class="menu.icon"></i> {{menu.title}}
-            </a>
-            <div class="menu">
+    <div class="ui vertical accordion menu">
+        <div class="item" v-for="menu in menus">
+            <a class="title header" :class="{'active': $index==0,'selected-menu': (menu.name==currentMenu)}"><i class="icon" :class="menu.icon"></i> {{menu.title}}<i class="dropdown icon"></i></a>
+            <div class="content menu" :class="{'active': $index==0}">
                 <a class="item" v-for="subMenu in menu.subMenu" v-link="{path: subMenu.path, exact: true}"> {{subMenu.title}} </a>
             </div>
         </div>
@@ -25,37 +23,53 @@
             }
         },
         ready(){
-            $('.ui.sidebar').sidebar({dimPage: false, closable: false,context:$('.ui.pushable')})
+            $('.main-menu .ui.accordion').accordion({exclusive:false})
         }
     }
 </script>
 <style scoped>
-    .ui.inverted.menu {
-        background-color: #353942;
-        border-right: 3px solid #0cadb7;
+    .ui.accordion.menu {
+        background-color: #293541;
+        color: #bbb;
+        border: none;
+        border-radius: 0;
     }
 
-    .ui.inverted.menu a.teal.item {
+    .ui.accordion.menu > .item {
+        padding: 0 !important;
+        color: #bbb !important;
+    }
+
+    .ui.accordion.menu .item .title {
+        padding: .92857143em 1.14285714em !important;
+        margin: 0 !important;
+        overflow: hidden;
         background-color: #323e4a;
         border-top: 1px solid #3d4853;
         border-bottom: 1px solid #252e37;
-        color: #999;
+        font-weight: 400;
+        font-size: 16px;
+        color: #bbb;
     }
 
-    .ui.inverted.menu .teal.active.item, .ui.inverted.teal.menu {
-        background-color: #00B5AD !important;
+    .ui.accordion.menu .item .title:hover, .ui.accordion.menu .item .selected-menu {
+        background-color: #0cadb7;
+        border-top: 1px solid #10E0EC;
+        border-bottom: 1px solid #097A82;
+        color: #ffffff;
     }
 
-    .ui.vertical.inverted.menu .menu .item {
-        height: 32px;
-        line-height: 19px;
+    .ui.accordion:not(.styled) .title ~ .content:not(.ui):last-child {
+        padding-bottom: 1em;
     }
 
-    .ui.vertical.inverted.menu .menu .item:hover, .ui.vertical.inverted.menu .menu .item.active {
-        color: #00B5AD !important;
+    .ui.vertical.menu .item .menu .active.item, .ui.accordion.menu .menu .item:hover {
+        background-color: rgba(25, 119, 125, 0.43);
+        color: #ffffff !important;
     }
 
-    .ui.menu .menu {
-        padding: 10px 0;
+    .ui.accordion.menu .menu .item {
+        padding-left: 60px;
+        color: #bbb;
     }
 </style>

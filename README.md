@@ -32,6 +32,8 @@ npm test
 ![image](https://github.com/rootsli/vueadmin/blob/master/doc/semantic-css-custom.jpg)
 
 ## Change Log
+- 20160808
+  - 菜单支持折叠与隐藏
 - 20160805
   - 菜单隐藏使用动画
   - 页面加载支持进度条
