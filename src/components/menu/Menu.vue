@@ -64,8 +64,8 @@
     }
 
     .ui.vertical.menu .item .menu .active.item, .ui.accordion.menu .menu .item:hover {
-        background-color: rgba(25, 119, 125, 0.43);
-        color: #ffffff !important;
+        background-color: #323E4A;
+        color: #0cadb7 !important;
     }
 
     .ui.accordion.menu .menu .item {
