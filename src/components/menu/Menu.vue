@@ -54,8 +54,8 @@
 
     .ui.accordion.menu .item .title:hover, .ui.accordion.menu .item .selected-menu {
         background-color: #0cadb7;
-        border-top: 1px solid #10E0EC;
-        border-bottom: 1px solid #097A82;
+        border-top: 1px solid #10C2CC;
+        border-bottom: 1px solid #097279;
         color: #ffffff;
     }
 
