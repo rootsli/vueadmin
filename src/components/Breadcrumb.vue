@@ -30,7 +30,7 @@
 </script>
 <style>
     .breadcrumb-item{
-        background-color: #eee;
+        background-color: #FFF;
         box-shadow: none;
         padding-left: 8px;
     }

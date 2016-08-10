@@ -10,11 +10,11 @@ export const login = (store, user) => {
     auth.login(user).then(response => {
         cookie.save('token', response.data.token)
         store.dispatch(types.LOGIN_SUCCESS, {token: token})
-        store.router.go({path: '/home/page1'})
+        store.router.go({path: '/home/list'})
     }, error => { //登录失败
         user.password = ''
         store.dispatch(types.LOGIN_FAILED, {error: '密码错误，请重新输入。'})
-        store.router.go({path: '/home/page2'})
+        store.router.go({path: '/home/list'})
     });
 }
 

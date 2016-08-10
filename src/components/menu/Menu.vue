@@ -19,7 +19,7 @@
         },
         vuex: {
             getters: {
-                currentMenu: ({menu}) => menu.current || 'menu1'
+                currentMenu: ({menu}) => menu.current || 'basicEditor'
             }
         },
         ready(){

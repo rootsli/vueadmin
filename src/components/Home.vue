@@ -191,3 +191,10 @@
         vertical-align: middle;
     }
 </style>
+<style>
+    .page-container {
+        height: 100%;
+        width: 100%;
+        padding: 22px;
+    }
+</style>

@@ -32,6 +32,9 @@ npm test
 ![image](https://github.com/rootsli/vueadmin/blob/master/doc/semantic-css-custom.jpg)
 
 ## Change Log
+- 20160810
+  - 新增翻页组件
+  - 新增表格示例
 - 20160808
   - 菜单支持折叠与隐藏
 - 20160805

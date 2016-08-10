@@ -3,49 +3,49 @@
  */
 export default [
     {
-        name: 'menu1',
-        title: '菜单1',
+        name: 'basicEditor',
+        title: '基本控件',
         icon: 'home',
         subMenu: [
             {
-                title: '页面1',
-                path: '/home/page1'
+                title: '表格',
+                path: '/home/list'
             },
             {
-                title: '页面3',
-                path: '/home/page3'
+                title: '表单',
+                path: '/home/form'
             }
         ]
 
     },
     {
-        name: 'menu2',
-        title: '菜单2',
+        name: 'chartEditor',
+        title: '报表控件',
         icon: 'block layout',
         subMenu: [
             {
-                title: '页面2',
-                path: '/home/page2'
+                title: '基本报表',
+                path: '/home/baseChart'
             },
             {
-                title: '页面4',
-                path: '/home/page4'
+                title: '地图',
+                path: '/home/map'
             }
         ]
 
     },
     {
-        name: 'menu3',
-        title: '菜单3',
+        name: 'other',
+        title: '其他控件',
         icon: 'calendar',
         subMenu: [
             {
-                title: '页面5',
-                path: '/home/page5'
+                title: '其他控件1',
+                path: '/home/other1'
             },
             {
-                title: '页面6',
-                path: '/home/page6'
+                title: '其他控件2',
+                path: '/home/other2'
             }
         ]
 

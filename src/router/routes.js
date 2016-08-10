@@ -3,9 +3,9 @@
  */
 import Login from '../components/Login'
 import Home from '../components/Home'
+import List from '../components/list'
 import Page1 from '../components/page1'
 import Page2 from '../components/page2'
-import Page3 from '../components/page3'
 
 export default {
     '/': {
@@ -17,23 +17,42 @@ export default {
         name: 'home',
         component: Home,
         subRoutes: {
-            '/page1': {
-                name: 'page1',
+            '/list': {
+                name: 'list',
                 auth: true,
-                parent: 'menu1', //上一级菜单名
-                component: Page1
+                parent: 'basicEditor', //上一级菜单名
+                component: List
             },
-            '/page2': {
-                name: 'page2',
+            '/form': {
+                name: 'form',
                 auth: true,
-                parent: 'menu2',
+                parent: 'basicEditor',
                 component: Page2
             },
-            '/page3': {
-                name: 'page3',
+            '/baseChart': {
+                name: 'baseChart',
                 auth: true,
-                parent: 'menu1',
-                component: Page3
+                parent: 'chartEditor',
+                component: Page2
+            },
+            '/map': {
+                name: 'map',
+                auth: true,
+                parent: 'chartEditor',
+                component: Page2
+            },
+            '/other1': {
+                name: 'other1',
+                auth: true,
+                parent: 'other',
+                component: Page1
+            }
+            ,
+            '/other2': {
+                name: 'other2',
+                auth: true,
+                parent: 'other',
+                component: Page2
             }
         }
     }
