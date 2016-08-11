@@ -1,5 +1,5 @@
 {
-    "name": "vue-admin",
+    "name": "vueadmin/vue-admin",
     "description": "A background manager scaffolding base Vue.js",
     "keywords": ["vue demo", "semantic ui", "vuex demo", "scaffolding base Vue.js"],
     "homepage": "https://github.com/rootsli/vueadmin",
