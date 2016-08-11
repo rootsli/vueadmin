@@ -36,16 +36,16 @@ npm test
 - 本项目虽然使用的是semantic-ui-css，但是由于Semantic UI 默认使用的是谷歌提供的字体，并且是直接使用了谷歌的官方链接。因此建议对css进行本地化定制，使用定制后编译生成的文件替换semantic-ui-css中的文件。
 具体定制方法请参考Semantic UI官方文档，主要变更如下：
     - 默认字体改为使用微软雅黑
-![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom1.jpg)
+    - ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom1.jpg)
 
     - 关闭google字体动态链接
-![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom2.jpg)
+    - ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom2.jpg)
 
     - 修改控件样式的默认颜色
-![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom3.jpg)
+    - ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom3.jpg)
 
     - 修改默认背景色
-![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom4.jpg)
+    -![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom4.jpg)
 
 ## Change Log
 - 20160811
