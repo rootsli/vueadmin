@@ -52,6 +52,7 @@ npm test
     ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom4.jpg)
 
     ### 附：[semantic-ui-custom.rar](https://github.com/rootsli/vueadmin/blob/master/doc/semantic-ui-custom.rar)。另，定制文件请见文件[site.variables](https://github.com/rootsli/vueadmin/blob/master/doc/site.variables)
+
 ## Change Log
 - 20160811
   - 更新README.md
