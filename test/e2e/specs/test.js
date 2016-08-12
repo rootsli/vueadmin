@@ -7,7 +7,7 @@ module.exports = {
     .url('http://localhost:8080')
       .waitForElementVisible('.ui.middle', 5000)
       .assert.elementPresent('.content')
-      .assert.containsText('div', '登录')
+      // .assert.containsText('div', '登录')
       .assert.elementCount('h2', 1)
       .end()
   }
