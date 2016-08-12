@@ -2,7 +2,7 @@
 
 vue-admin - A background manager scaffolding base Vue.js
 ========================================================
-[![Build Status](https://api.travis-ci.org/rootsli/vueadmin.svg?branch=master)](https://travis-ci.org/rootsli/vueadmin)
+<!--[![Build Status](https://api.travis-ci.org/rootsli/vueadmin.svg?branch=master)](https://travis-ci.org/rootsli/vueadmin)-->
 [![Packagist](https://img.shields.io/badge/packagist-1.1.2-blue.svg)](https://packagist.org/packages/vueadmin/vue-admin)
 [![Vuejs](https://img.shields.io/badge/%20Powered%20by%20-%20Vuejs%201.x.x%20-green.svg?style=flat)](http://cn.vuejs.org/)
 
