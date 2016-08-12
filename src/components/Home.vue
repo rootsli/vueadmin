@@ -13,7 +13,7 @@
             </div>
             <div class="menu ui transition">
                 <a class="item" href="http://www.yeelink.net"><i class="reply mail icon"></i>返回首页</a>
-                <a class="item" href="/user/logout"><i class="sign out icon"></i>注销登录</a>
+                <a class="item" href="javascript:;" @click="logout"><i class="sign out icon"></i>注销登录</a>
             </div>
         </div>
     </div>
@@ -88,6 +88,9 @@
                     }, 200)
                     this.toggleTitle = '隐藏菜单'
                 }
+            },
+            logout(){
+                this.$route.router.go('/')
             }
         },
         ready(){
@@ -196,5 +199,8 @@
         height: 100%;
         width: 100%;
         padding: 22px;
+    }
+    .ui.table a.operator:not(:first-child){
+        margin-left: 12px !important;
     }
 </style>

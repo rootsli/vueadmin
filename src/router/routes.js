@@ -3,7 +3,8 @@
  */
 import Login from '../components/Login'
 import Home from '../components/Home'
-import List from '../components/list'
+import List from '../components/List'
+import Form from '../components/Form'
 import Page1 from '../components/page1'
 import Page2 from '../components/page2'
 
@@ -27,7 +28,7 @@ export default {
                 name: 'form',
                 auth: true,
                 parent: 'basicEditor',
-                component: Page2
+                component: Form
             },
             '/baseChart': {
                 name: 'baseChart',
