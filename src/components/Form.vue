@@ -102,7 +102,6 @@
 
     .form-content {
         overflow: hidden;
-        margin: 20px;
         background-color: #fff;
         border: 1px solid #ddd;
         padding: 36px 0 25px 36px;
