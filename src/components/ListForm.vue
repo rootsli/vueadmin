@@ -70,7 +70,7 @@
 </script>
 <style scoped>
     .ui.form .inline.field > label, .ui.form .inline.fields > label {
-        width: 80px;
+        width: 120px;
     }
 
     .ui.form .inline.field > input {
