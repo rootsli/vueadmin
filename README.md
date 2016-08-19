@@ -79,3 +79,6 @@ npm test
 
   - 主页面
   ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/main.jpg)
+
+  - 表单
+  ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/form.jpg)
