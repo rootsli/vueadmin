@@ -54,6 +54,8 @@ npm test
     ### 附：[semantic-ui-custom.rar](https://github.com/rootsli/vueadmin/blob/master/doc/semantic-ui-custom.rar)。另，定制文件请见文件[site.variables](https://github.com/rootsli/vueadmin/blob/master/doc/site.variables)
 
 ## Change Log
+- 20160820
+  - 新增表单示例
 - 20160812
   - list示例新增项目的新增，编辑case
 - 20160811
