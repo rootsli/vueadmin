@@ -10,6 +10,12 @@ A Vue.js background manager scaffolding base vue.js(1.0.x) + Semantic UI + vuex 
 
 使用Vue.js作为基础框架，Semantic UI作为UI层，实现了一个后台管理系统的基础框架。可以基于此框架实现功能复杂的后台管理系统。
 
+## 主要依赖组件
+* vue.js ^1.0.21
+* semantic-ui-css ^2.2.2
+   由于semantic-ui经过了定制，因此建议将下文“关于semanticUI css的本地化定制”章节附件semantic-ui-custom.rar直接解压到node_modules\semantic-ui-css目录下即可（需先运行npm install）。否则项目跑起来后，界面和截图不一致。
+* 百度 echarts3
+
 ## Build Setup
 
 ``` bash
@@ -52,7 +58,7 @@ npm test
     ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom4.jpg)
 
     ### 附：[semantic-ui-custom.rar](https://github.com/rootsli/vueadmin/blob/master/doc/semantic-ui-custom.rar)。另，定制文件请见文件[site.variables](https://github.com/rootsli/vueadmin/blob/master/doc/site.variables)
-
+    ### 如不想自己定制，也可以直接解压semantic-ui-custom.rar内容覆盖掉node_modules\semantic-ui-css目录下内容即可（需先运行npm install）。
 ## 菜单右侧主页面布局说明
 * 典型的布局结构（推荐布局）
 ```html
