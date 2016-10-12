@@ -57,7 +57,7 @@ npm test
     
     ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom4.jpg)
 
-    ### 附：[semantic-ui-custom.rar](https://github.com/rootsli/vueadmin/blob/master/doc/semantic-ui-custom.rar)。另，定制文件请见文件[site.variables](https://github.com/rootsli/vueadmin/blob/master/doc/site.variables)
+    ### 附：[semantic-ui-custom.rar](https://github.com/rootsli/vueadmin/blob/master/doc/semantic-ui-custom.rar)(可通过右键另存为保存)。另，定制文件请见文件[site.variables](https://github.com/rootsli/vueadmin/blob/master/doc/site.variables)
     ### 如不想自己定制，也可以直接解压semantic-ui-custom.rar内容覆盖掉node_modules\semantic-ui-css目录下内容即可（需先运行npm install）。
 ## 菜单右侧主页面布局说明
 * 典型的布局结构（推荐布局）
