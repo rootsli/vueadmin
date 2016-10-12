@@ -63,7 +63,7 @@ npm test
 * 典型的布局结构（推荐布局）
 ```html
     ...
-     <breadcrumb :paths="paths"></breadcrumb> <!-- 面包屑 -->
+    <breadcrumb :paths="paths"></breadcrumb> <!-- 面包屑 -->
     <div class="page-container"> <!-- 内容区 -->
             <h3 class="ui header">标题</h3> <!-- 标题 -->
             <div style="height:95%;overflow:auto;"> <!-- 主内容 -->
