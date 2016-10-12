@@ -96,13 +96,13 @@ npm test
 - 实现基本图形示例
 
 ## To Do List
-  - 报表实例:地图示例
+  - 报表实例：地图示例
   
-## 界面截图
+## UI截图
   - 登录界面
   ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/login.jpg)
 
-  - 主页面及表格示例
+  - 表格示例
   ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/main.jpg)
 
   - 表单
