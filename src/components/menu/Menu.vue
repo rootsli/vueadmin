@@ -79,5 +79,6 @@
     .ui.accordion.menu .menu .item {
         padding-left: 60px;
         color: #bbb;
+        font-size: 1em !important;
     }
 </style>
