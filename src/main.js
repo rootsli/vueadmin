@@ -12,6 +12,10 @@ import alias from './router/alias'
 import * as filters from './filters'
 import App from './App'
 import {SET_MENU, SET_PROGRESS} from './vuex/types'
+import ECharts from 'vue-echarts/src/components/ECharts.vue'
+
+//全局注册echarts插件，也可以不在此处注册而直接在组件内部注册。具体请参考vue-echarts插件
+Vue.component('chart', ECharts)
 
 //Validator
 Vue.use(VueValidator)

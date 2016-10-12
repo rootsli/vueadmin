@@ -75,7 +75,7 @@
         data(){
             return {
                 paths: [{
-                    title: '菜单',
+                    title: '基本控件',
                     icon: 'home'
                 }, {
                     title: '表格示例',

@@ -2,8 +2,8 @@
     <!-- breadcrumb -->
     <breadcrumb :paths="paths"></breadcrumb>
     <div class="ui basic segment">
-        <div>this is page2</div>
-        <a class="item" v-link="{path: '/home/page1', exact: true}"> 跳转到页面1 </a>
+        <div>this is Page2</div>
+        <a class="item" v-link="{path: '/home/other1', exact: true}"> 跳转到页面1 </a>
     </div>
 </template>
 <script>
@@ -12,14 +12,14 @@
         data(){
             return {
                 paths: [{
-                    title: '菜单',
+                    title: '页面测试',
                     icon: 'calendar'
                 }, {
                     title: '页面1',
-                    link: '/home/page1'
+                    link: '/home/other1'
                 },{
                     title: '页面2',
-                    link: '/home/page2'
+                    link: '/home/other2'
                 }]
             }
         },

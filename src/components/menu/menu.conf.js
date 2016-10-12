@@ -20,11 +20,11 @@ export default [
     },
     {
         name: 'chartEditor',
-        title: '报表控件',
+        title: '图形报表',
         icon: 'block layout',
         subMenu: [
             {
-                title: '基本报表',
+                title: '基本图形',
                 path: '/home/baseChart'
             },
             {
@@ -36,15 +36,15 @@ export default [
     },
     {
         name: 'other',
-        title: '其他控件',
+        title: '页面测试',
         icon: 'calendar',
         subMenu: [
             {
-                title: '其他控件1',
+                title: '内容超边界布局示例',
                 path: '/home/other1'
             },
             {
-                title: '其他控件2',
+                title: '页面跳转示例',
                 path: '/home/other2'
             }
         ]

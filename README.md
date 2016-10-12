@@ -53,6 +53,28 @@ npm test
 
     ### 附：[semantic-ui-custom.rar](https://github.com/rootsli/vueadmin/blob/master/doc/semantic-ui-custom.rar)。另，定制文件请见文件[site.variables](https://github.com/rootsli/vueadmin/blob/master/doc/site.variables)
 
+## 菜单右侧主页面布局说明
+* 典型的布局结构（推荐布局）
+```html
+    ...
+     <breadcrumb :paths="paths"></breadcrumb> <!-- 面包屑 -->
+    <div class="page-container"> <!-- 内容区 -->
+            <h3 class="ui header">标题</h3> <!-- 标题 -->
+            <div style="height:95%;overflow:auto;"> <!-- 主内容 -->
+                <div class="ui basic segment"> <!-- 内容段，可以包含多个，至少包含一个 -->  
+                    <!-- 内容区1 -->     
+                </div>
+                <div class="ui basic segment">
+                    <!-- 内容区2 -->                
+                </div>
+            </div>
+        </div>
+    ...
+```
+
+* 界面说明
+  ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/container-layout.jpg)
+
 ## Change Log
 - 20160820
   - 新增表单示例
@@ -68,10 +90,13 @@ npm test
 - 20160805
   - 菜单隐藏使用动画
   - 页面加载支持进度条
-  
+- 20161012
+- 整合vue-echarts
+- 整合百度echarts3
+- 实现基本图形示例
+
 ## To Do List
-  - 表单实例
-  - 报表实例
+  - 报表实例:地图示例
   
 ## 界面截图
   - 登录界面
@@ -82,3 +107,6 @@ npm test
 
   - 表单
   ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/form.jpg)
+  
+  - 基本图形
+    ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/basecharts.jpg)
