@@ -100,6 +100,7 @@ npm test
 - 整合vue-echarts
 - 整合百度echarts3
 - 实现基本图形示例
+- 页面F5刷新时，菜单展开错误问题修复
 
 ## To Do List
   - 报表实例：地图示例

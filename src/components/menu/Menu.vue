@@ -1,8 +1,8 @@
 <template>
     <div class="ui vertical accordion menu">
         <div class="item" v-for="menu in menus">
-            <a class="title header" :class="{'active': $index==0,'selected-menu': (menu.name==currentMenu)}"><i class="icon" :class="menu.icon"></i> {{menu.title}}<i class="dropdown icon"></i></a>
-            <div class="content menu" :class="{'active': $index==0}">
+            <a class="title header" :class="{'active': $index==currentIndex,'selected-menu': (menu.name==currentMenu)}"><i class="icon" :class="menu.icon"></i> {{menu.title}}<i class="dropdown icon"></i></a>
+            <div class="content menu" :class="{'active': $index==currentIndex}">
                 <a class="item" v-for="subMenu in menu.subMenu" v-link="{path: subMenu.path, exact: true}"> {{subMenu.title}} </a>
             </div>
         </div>
@@ -15,6 +15,7 @@
         data(){
             return {
                 menus: menus,
+                currentIndex: 0
             }
         },
         vuex: {
@@ -23,7 +24,14 @@
             }
         },
         ready(){
-            $('.main-menu .ui.accordion').accordion({exclusive:false})
+            for (var k = 0; k < menus.length; k++) {
+                if (menus[k].name == this.currentMenu) {
+                    this.currentIndex = k;
+                    break;
+                }
+            }
+
+            $('.main-menu .ui.accordion').accordion({exclusive: false})
         }
     }
 </script>
