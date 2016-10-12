@@ -102,7 +102,7 @@ npm test
   - 登录界面
   ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/login.jpg)
 
-  - 主页面
+  - 主页面及表格示例
   ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/main.jpg)
 
   - 表单
