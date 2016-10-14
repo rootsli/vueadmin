@@ -37,24 +37,24 @@ npm run e2e
 # run all tests
 npm test
 ```
- 
+
 ## 关于semanticUI css的本地化定制
 * 本项目虽然使用的是semantic-ui-css，但是由于Semantic UI 默认使用的是谷歌提供的字体，并且是直接使用了谷歌的官方链接。因此建议对css进行本地化定制，使用定制后编译生成的文件替换semantic-ui-css中的文件。
 具体定制方法请参考Semantic UI官方文档，主要变更如下：
     * 默认字体改为使用微软雅黑
-    
+
     ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom1.jpg)
 
     * 关闭google字体动态链接
-    
+
     ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom2.jpg)
 
     * 修改控件样式的默认颜色
-    
+
     ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom3.jpg)
 
     * 修改默认背景色
-    
+
     ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/custom4.jpg)
 
     ### 附：[semantic-ui-custom.rar](https://github.com/rootsli/vueadmin/blob/master/doc/semantic-ui-custom.rar)(可通过右键另存为保存)。另，定制文件请见文件[site.variables](https://github.com/rootsli/vueadmin/blob/master/doc/site.variables)
@@ -67,11 +67,11 @@ npm test
     <div class="page-container"> <!-- 内容区 -->
             <h3 class="ui header">标题</h3> <!-- 标题 -->
             <div style="height:95%;overflow:auto;"> <!-- 主内容 -->
-                <div class="ui basic segment"> <!-- 内容段，可以包含多个，至少包含一个 -->  
-                    <!-- 内容区1 -->     
+                <div class="ui basic segment"> <!-- 内容段，可以包含多个，至少包含一个 -->
+                    <!-- 内容区1 -->
                 </div>
                 <div class="ui basic segment">
-                    <!-- 内容区2 -->                
+                    <!-- 内容区2 -->
                 </div>
             </div>
         </div>
@@ -101,10 +101,12 @@ npm test
 - 整合百度echarts3
 - 实现基本图形示例
 - 页面F5刷新时，菜单展开错误问题修复
+- 20161014
+- 生产打包js文件生成6位数的hash
 
 ## To Do List
   - 报表实例：地图示例
-  
+
 ## UI截图
   - 登录界面
   ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/login.jpg)
@@ -114,6 +116,6 @@ npm test
 
   - 表单
   ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/form.jpg)
-  
+
   - 基本图形
     ![image](https://github.com/rootsli/vueadmin/blob/master/doc/img/basecharts.jpg)
