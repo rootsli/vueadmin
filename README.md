@@ -10,6 +10,8 @@ A Vue.js background manager scaffolding base vue.js(1.0.x) + Semantic UI + vuex 
 
 使用Vue.js作为基础框架，Semantic UI作为UI层，实现了一个后台管理系统的基础框架。可以基于此框架实现功能复杂的后台管理系统。
 
+[运行效果](http://vueadmin.duapp.com?_blank)
+
 ## 主要依赖组件
 * vue.js ^1.0.21
 * semantic-ui-css ^2.2.2
@@ -103,6 +105,7 @@ npm test
 - 页面F5刷新时，菜单展开错误问题修复
 - 20161014
 - 生产打包js文件生成6位数的hash
+- 添加运行效果
 
 ## To Do List
   - 报表实例：地图示例
