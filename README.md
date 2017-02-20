@@ -12,6 +12,10 @@ A Vue.js background manager scaffolding base vue.js(1.0.x) + Semantic UI + vuex 
 
 [点此查看运行效果](http://vueadmin.duapp.com)（登录名：admin，密码：admin）
 
+```
+已基于vue2+webpack2+elementUI实现了一套全新的后台管理框架，具体请移步 https://github.com/rootsli/vue2admin 查看
+```
+
 ## 主要依赖组件
 * vue.js ^1.0.21
 * semantic-ui-css ^2.2.2
