@@ -12,7 +12,7 @@ A Vue.js background manager scaffolding base vue.js(1.0.x) + Semantic UI + vuex 
 
 [点此查看运行效果](http://vueadmin.duapp.com)（登录名：admin，密码：admin）
 
-<font color=#0099ff>已基于 vue2 + webpack2 + elementUI 实现了一套全新的后台管理框架，具体请移步 [https://github.com/rootsli/vue2admin] (http://vueadmin.duapp.com)查看</font>
+※<font color="#0099ff">已基于 vue2 + webpack2 + elementUI 实现了一套全新的后台管理框架，具体请移步 [https://github.com/rootsli/vue2admin] (http://vueadmin.duapp.com)查看</font>
 
 
 ## 主要依赖组件
